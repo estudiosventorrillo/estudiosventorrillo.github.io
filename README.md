@@ -27,7 +27,3 @@ Este proyecto simula un sistema operativo de escritorio ("Pinboard OS") para pre
 ---
 
 © 2026 Juan Luis Valverde Salgueiro.
-
----
-
-© 2026 Juan Luis Valverde Salgueiro.
