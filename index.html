@@ -228,7 +228,7 @@
         
         <!-- Elementos de fondo -->
         <div class="absolute top-6 left-6 font-mono text-xs text-gray-400 pointer-events-none opacity-50">
-            <p>OS: PORTAFOLIO_ONLINE_V1.22</p>
+            <p>OS: PORTAFOLIO_ONLINE_V1.20</p>
             <p>USER: JUAN_LUIS_VALVERDE_SALGUEIRO</p>
         </div>
 
@@ -238,26 +238,21 @@
             <p class="hidden md:block">ARRASTRA LAS VENTANAS PARA ORGANIZAR</p>
         </div>
 
-        <!-- 📄 CARTEL PRINCIPAL -->
-        <!-- 1. CONTENEDOR PRINCIPAL:
-     - Mantenemos 'max-h-[85dvh]' para seguridad en móviles pequeños.
--->
+        <!-- CONTENEDOR PRINCIPAL: Centrado y con altura máxima adaptable -->
 <div id="main-poster" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[600px] z-10 flex flex-col max-h-[85dvh] md:max-h-[95vh]">
     
-    <!-- 2. PAPEL BLANCO:
-         - Añadido 'pb-0' base, el padding extra lo gestionaremos en el footer.
+    <!-- 1. PAPEL BLANCO (Scrollable si es necesario) 
+         Añadido 'flex-1 min-h-0' para que ocupe el espacio disponible y haga scroll si se pasa.
     -->
-    <div class="bg-paper paper-texture rounded-t-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] relative flex flex-col overflow-y-auto md:overflow-hidden no-scrollbar">
+    <div class="bg-paper paper-texture rounded-t-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] relative flex flex-col overflow-y-auto md:overflow-hidden no-scrollbar flex-1 min-h-0">
         
         <!-- Cintas (Tapes) -->
         <div class="tape absolute -top-4 left-8 w-24 h-8 -rotate-3 z-20"></div>
         <div class="tape absolute -top-4 right-8 w-24 h-8 rotate-2 z-20"></div>
         <div class="tape absolute bottom-20 -left-4 w-8 h-20 rotate-3 z-20"></div>
 
-        <!-- CONTENIDO:
-             - Ajustado 'pt-4' en móvil para compactar un poco arriba.
-        -->
-        <div class="px-4 pt-4 pb-0 md:px-8 md:pt-6 md:pb-2 relative flex-grow">
+        <!-- CONTENIDO PRINCIPAL -->
+        <div class="px-4 pt-4 md:px-8 md:pt-6 pb-2 relative flex-grow">
             
             <!-- PEGATINA OPEN TO WORK -->
             <div class="absolute top-2 right-2 md:top-10 md:right-6 w-20 h-20 md:w-28 md:h-28 bg-neon-rose rounded-full flex items-center justify-center text-white font-marker rotate-12 shadow-md z-10 animate-pulse border-4 border-double border-white">
@@ -281,7 +276,6 @@
                 
                 <div class="w-16 h-1 bg-black mx-auto opacity-10 rounded-full"></div>
 
-                <!-- Bloque de texto descriptivo -->
                 <div class="text-left p-4 md:p-6 relative border-l-4 border-black pl-4">
                     <p class="font-hand font-bold text-xl md:text-2xl mb-2 md:mb-3 text-gray-900 leading-none">
                         Busco el "porqué" y el "cómo" detrás de cada imagen.
@@ -295,10 +289,8 @@
             </div>
         </div>
 
-        <!-- FLECHA INFERIOR + ZONA DE SEGURIDAD MÓVIL
-             - Añadido 'pb-8 md:pb-2': En móvil damos mucho aire abajo para evitar el corte.
-        -->
-        <div class="text-center pt-2 pb-8 md:pb-2 relative z-10 bg-paper paper-texture shrink-0">
+        <!-- PIE DE PÁGINA: Mis Proyectos -->
+        <div class="text-center pt-2 pb-4 relative z-10 bg-paper paper-texture shrink-0">
             <div class="inline-block">
                 <p class="font-marker text-lg md:text-xl text-black">MIS PROYECTOS</p>
                 <p class="font-hand text-xs text-gray-500 font-bold mb-1">(¡Coge lo que necesites!)</p>
@@ -306,44 +298,44 @@
             </div>
         </div>
     </div>
-</div>
-            <!-- ZONA DE PESTAÑAS -->
-            <!-- Así debe quedar la línea de apertura -->
-            <div class="tear-tab-container flex justify-center items-start gap-1 px-2 pb-0 relative z-20">
-                
-                <div class="group relative w-16 md:w-20 tear-tab h-28 flex flex-col items-center justify-center p-2 gap-2" onclick="tearTab(this, 'graphic')">
-                    <i data-lucide="palette" class="w-6 h-6 text-neon-rose"></i>
-                    <span class="font-mono font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">DISEÑO<br>GRÁFICO</span>
-                </div>
 
-                 <div class="group relative w-16 md:w-20 tear-tab h-28 flex flex-col items-center justify-center p-2 gap-2" onclick="tearTab(this, 'branding')">
-                    <i data-lucide="stamp" class="w-6 h-6 text-orange-500"></i>
-                    <span class="font-mono font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">BRAND<br>IDENTITY</span>
-                </div>
-
-                <div class="group relative w-16 md:w-20 tear-tab h-28 flex flex-col items-center justify-center p-2 gap-2" onclick="tearTab(this, 'campaign')">
-                    <i data-lucide="video" class="w-6 h-6 text-neon-green"></i>
-                    <span class="font-mono font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">CAMPAÑAS<br>360º</span>
-                </div>
-
-                <div class="group relative w-16 md:w-20 tear-tab h-28 flex flex-col items-center justify-center p-2 gap-2" onclick="tearTab(this, 'ui')">
-                    <i data-lucide="smartphone" class="w-6 h-6 text-blue-600"></i>
-                    <span class="font-mono font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">UX / UI<br>APPS</span>
-                </div>
-
-                <div class="group relative w-16 md:w-20 tear-tab h-28 flex flex-col items-center justify-center p-2 gap-2" onclick="tearTab(this, 'social')">
-                    <i data-lucide="trending-up" class="w-6 h-6 text-purple-600"></i>
-                    <span class="font-mono font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">SOCIAL<br>MEDIA</span>
-                </div>
-
-                <div class="group relative w-16 md:w-20 tear-tab h-28 flex flex-col items-center justify-center p-2 gap-2" onclick="tearTab(this, 'contact')">
-                    <i data-lucide="phone" class="w-6 h-6 text-black"></i>
-                    <span class="font-mono font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">CONTACTO<br>& CV</span>
-                </div>
-
-            </div>
+    <!-- 2. PESTAÑAS (TABS) - AHORA SÍ INCLUIDAS
+         'shrink-0' asegura que no se aplasten si falta espacio.
+    -->
+    <div class="tear-tab-container flex justify-center items-start gap-1 px-1 md:px-2 pb-0 relative z-20 shrink-0">
+        
+        <div class="group relative w-full md:w-20 tear-tab h-20 md:h-28 flex flex-col items-center justify-center p-1 md:p-2 gap-1 md:gap-2" onclick="tearTab(this, 'graphic')">
+            <i data-lucide="palette" class="w-4 h-4 md:w-6 md:h-6 text-neon-rose"></i>
+            <span class="font-mono font-bold text-[7px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">DISEÑO<br>GRÁFICO</span>
         </div>
+
+         <div class="group relative w-full md:w-20 tear-tab h-20 md:h-28 flex flex-col items-center justify-center p-1 md:p-2 gap-1 md:gap-2" onclick="tearTab(this, 'branding')">
+            <i data-lucide="stamp" class="w-4 h-4 md:w-6 md:h-6 text-orange-500"></i>
+            <span class="font-mono font-bold text-[7px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">BRAND<br>IDENTITY</span>
+        </div>
+
+        <div class="group relative w-full md:w-20 tear-tab h-20 md:h-28 flex flex-col items-center justify-center p-1 md:p-2 gap-1 md:gap-2" onclick="tearTab(this, 'campaign')">
+            <i data-lucide="video" class="w-4 h-4 md:w-6 md:h-6 text-neon-green"></i>
+            <span class="font-mono font-bold text-[7px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">CAMPAÑAS<br>360º</span>
+        </div>
+
+        <div class="group relative w-full md:w-20 tear-tab h-20 md:h-28 flex flex-col items-center justify-center p-1 md:p-2 gap-1 md:gap-2" onclick="tearTab(this, 'ui')">
+            <i data-lucide="smartphone" class="w-4 h-4 md:w-6 md:h-6 text-blue-600"></i>
+            <span class="font-mono font-bold text-[7px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">UX / UI<br>APPS</span>
+        </div>
+
+        <div class="group relative w-full md:w-20 tear-tab h-20 md:h-28 flex flex-col items-center justify-center p-1 md:p-2 gap-1 md:gap-2" onclick="tearTab(this, 'social')">
+            <i data-lucide="trending-up" class="w-4 h-4 md:w-6 md:h-6 text-purple-600"></i>
+            <span class="font-mono font-bold text-[7px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">SOCIAL<br>MEDIA</span>
+        </div>
+
+        <div class="group relative w-full md:w-20 tear-tab h-20 md:h-28 flex flex-col items-center justify-center p-1 md:p-2 gap-1 md:gap-2" onclick="tearTab(this, 'contact')">
+            <i data-lucide="phone" class="w-4 h-4 md:w-6 md:h-6 text-black"></i>
+            <span class="font-mono font-bold text-[7px] md:text-[10px] tracking-widest uppercase text-gray-800 text-center leading-tight">CONTACTO<br>& CV</span>
+        </div>
+
     </div>
+</div>
 
     <!-- JAVASCRIPT -->
     <script>
