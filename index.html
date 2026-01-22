@@ -228,66 +228,84 @@
         
         <!-- Elementos de fondo -->
         <div class="absolute top-6 left-6 font-mono text-xs text-gray-400 pointer-events-none opacity-50">
-            <p>OS: PORTAFOLIO_ONLINE_V1.20</p>
+            <p>OS: PORTAFOLIO_ONLINE_V1.22</p>
             <p>USER: JUAN_LUIS_VALVERDE_SALGUEIRO</p>
         </div>
 
         <div class="absolute bottom-6 right-6 font-mono text-xs text-gray-400 text-right pointer-events-none opacity-50">
             <p>PULSA LAS TIRAS PARA EXPLORAR</p>
-            <p>ARRASTRA LAS VENTANAS PARA ORGANIZAR</p>
+            <!-- CAMBIO: Añadido 'hidden md:block' para que solo se vea en escritorio -->
+            <p class="hidden md:block">ARRASTRA LAS VENTANAS PARA ORGANIZAR</p>
         </div>
 
         <!-- 📄 CARTEL PRINCIPAL -->
-        <div id="main-poster">
-            <div class="bg-paper paper-texture rounded-t-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] relative overflow-hidden">
+        <!-- 1. CONTENEDOR PRINCIPAL:
+     - Mantenemos 'max-h-[85dvh]' para seguridad en móviles pequeños.
+-->
+<div id="main-poster" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] max-w-[600px] z-10 flex flex-col max-h-[85dvh] md:max-h-[95vh]">
+    
+    <!-- 2. PAPEL BLANCO:
+         - Añadido 'pb-0' base, el padding extra lo gestionaremos en el footer.
+    -->
+    <div class="bg-paper paper-texture rounded-t-sm shadow-[0_10px_30px_rgba(0,0,0,0.3)] relative flex flex-col overflow-y-auto md:overflow-hidden no-scrollbar">
         
-        <!-- Aquí van tus cintas (tapes) -->
+        <!-- Cintas (Tapes) -->
         <div class="tape absolute -top-4 left-8 w-24 h-8 -rotate-3 z-20"></div>
         <div class="tape absolute -top-4 right-8 w-24 h-8 rotate-2 z-20"></div>
         <div class="tape absolute bottom-20 -left-4 w-8 h-20 rotate-3 z-20"></div>
 
-            <div class="px-8 pt-6 pb-2 relative flex-grow">
-                <!-- PEGATINA OPEN TO WORK - TAMAÑO AJUSTADO -->
-                <div class="absolute top-2 right-2 md:top-10 md:right-6 w-20 h-20 md:w-28 md:h-28 bg-neon-rose rounded-full flex items-center justify-center text-white font-marker rotate-12 shadow-md z-10 animate-pulse border-4 border-double border-white">
+        <!-- CONTENIDO:
+             - Ajustado 'pt-4' en móvil para compactar un poco arriba.
+        -->
+        <div class="px-4 pt-4 pb-0 md:px-8 md:pt-6 md:pb-2 relative flex-grow">
+            
+            <!-- PEGATINA OPEN TO WORK -->
+            <div class="absolute top-2 right-2 md:top-10 md:right-6 w-20 h-20 md:w-28 md:h-28 bg-neon-rose rounded-full flex items-center justify-center text-white font-marker rotate-12 shadow-md z-10 animate-pulse border-4 border-double border-white">
                 <span class="text-center text-[10px] md:text-sm leading-none transform -rotate-12 uppercase">Open<br>to<br>Work</span>
-                </div>
-
-                <div class="text-center space-y-3">
-                    <div class="inline-block bg-black text-white px-3 py-1 text-xs font-black uppercase tracking-widest -rotate-2 border-2 border-white shadow-sm">
-                        JUAN LUIS VALVERDE SALGUEIRO
-                    </div>
-                    
-                    <div>
-                        <h1 class="text-5xl md:text-6xl leading-[0.9] font-black font-sans uppercase tracking-tighter text-black mb-2">
-                            DIRECTOR<br>DE ARTE
-                        </h1>
-                        <h2 class="text-xl md:text-2xl font-marker text-neon-rose rotate-[-2deg]">
-                            & Creative Content Creator
-                        </h2>
-                    </div>
-                    
-                    <div class="w-16 h-1 bg-black mx-auto opacity-10 rounded-full"></div>
-
-                    <div class="text-left p-6 relative border-l-4 border-black pl-4">
-                        <p class="font-hand font-bold text-2xl mb-3 text-gray-900 leading-none">
-                            Busco el "porqué" y el "cómo" detrás de cada imagen.
-                        </p>
-                        <p class="font-sans text-sm leading-relaxed text-gray-700">
-                            <strong>Director de Arte con mentalidad de Arquitecto.</strong><br>
-                            Porque para mi el diseño no es decoración, es estructura.<br><br>
-                            <span class="font-bold bg-black text-white px-1">Mi enfoque:</span> Visual Storytelling + Datos.
-                        </p>
-                    </div>
-                </div>
             </div>
 
-            <div class="text-center pt-4 pb-2 relative z-10 bg-paper paper-texture">
-                <div class="inline-block">
-                    <p class="font-marker text-xl text-black">MIS PROYECTOS</p>
-                    <p class="font-hand text-m text-gray-500 font-bold mb-2">(¡Coge lo que necesites!)</p>
-                    <i data-lucide="arrow-down" class="w-4 h-4 mx-auto animate-bounce text-gray-400"></i>
+            <!-- TEXTOS -->
+            <div class="text-center space-y-2 md:space-y-3">
+                <div class="inline-block bg-black text-white px-3 py-1 text-[10px] md:text-xs font-black uppercase tracking-widest -rotate-2 border-2 border-white shadow-sm">
+                    JUAN LUIS VALVERDE SALGUEIRO
+                </div>
+                
+                <div>
+                    <h1 class="text-4xl md:text-6xl leading-[0.9] font-black font-sans uppercase tracking-tighter text-black mb-1 md:mb-2">
+                        DIRECTOR<br>DE ARTE
+                    </h1>
+                    <h2 class="text-lg md:text-2xl font-marker text-neon-rose rotate-[-2deg]">
+                        & Creative Content Creator
+                    </h2>
+                </div>
+                
+                <div class="w-16 h-1 bg-black mx-auto opacity-10 rounded-full"></div>
+
+                <!-- Bloque de texto descriptivo -->
+                <div class="text-left p-4 md:p-6 relative border-l-4 border-black pl-4">
+                    <p class="font-hand font-bold text-xl md:text-2xl mb-2 md:mb-3 text-gray-900 leading-none">
+                        Busco el "porqué" y el "cómo" detrás de cada imagen.
+                    </p>
+                    <p class="font-sans text-xs md:text-sm leading-relaxed text-gray-700">
+                        <strong>Director de Arte con mentalidad de Arquitecto.</strong><br>
+                        Porque para mí el diseño no es decoración, es estructura.<br><br>
+                        <span class="font-bold bg-black text-white px-1">Mi enfoque:</span> Visual Storytelling + Datos.
+                    </p>
                 </div>
             </div>
+        </div>
+
+        <!-- FLECHA INFERIOR + ZONA DE SEGURIDAD MÓVIL
+             - Añadido 'pb-8 md:pb-2': En móvil damos mucho aire abajo para evitar el corte.
+        -->
+        <div class="text-center pt-2 pb-8 md:pb-2 relative z-10 bg-paper paper-texture shrink-0">
+            <div class="inline-block">
+                <p class="font-marker text-lg md:text-xl text-black">MIS PROYECTOS</p>
+                <p class="font-hand text-xs text-gray-500 font-bold mb-1">(¡Coge lo que necesites!)</p>
+                <i data-lucide="arrow-down" class="w-4 h-4 mx-auto animate-bounce text-gray-400"></i>
+            </div>
+        </div>
+    </div>
 </div>
             <!-- ZONA DE PESTAÑAS -->
             <!-- Así debe quedar la línea de apertura -->
