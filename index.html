@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <!-- 4. Fuentes Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shadows+Into+Light&family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- Configuración Tailwind -->
     <script>
@@ -27,8 +27,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        'marker': ['"Permanent Marker"', 'cursive'],
-                        'hand': ['"Shadows Into Light"', 'cursive'],
+                        // Mapeamos las antiguas fuentes a Space Mono para no romper tu HTML
+                        'marker': ['"Space Mono"', 'monospace'], 
+                        'hand': ['"Space Mono"', 'monospace'],   
                         'sans': ['Inter', 'sans-serif'],
                         'mono': ['"Space Mono"', 'monospace'],
                     },
@@ -228,12 +229,13 @@
         
         <!-- Elementos de fondo -->
         <div class="absolute top-6 left-6 font-mono text-xs text-gray-400 pointer-events-none opacity-50">
-            <p>OS: PORTAFOLIO_ONLINE_V1.22</p>
+            <p>OS: PORTAFOLIO_ONLINE_V2.17</p>
             <p>USER: JUAN_LUIS_VALVERDE_SALGUEIRO</p>
         </div>
 
         <div class="absolute bottom-6 right-6 font-mono text-xs text-gray-400 text-right pointer-events-none opacity-50">
             <p>PULSA LAS TIRAS PARA EXPLORAR</p>
+            <p>ARRANCA SIN MIEDO. SE REGENERAN A LA DERECHA</p>
             <!-- CAMBIO: Añadido 'hidden md:block' para que solo se vea en escritorio -->
             <p class="hidden md:block">ARRASTRA LAS VENTANAS PARA ORGANIZAR</p>
         </div>
@@ -388,9 +390,9 @@
                         </a>
                         
                         <!-- CARTEL 04 -->
-                        <a href="https://www.instagram.com/p/DTiTh0LAmQb/?hl=es&img_index=1" target="_blank" class="cork-item relative md:absolute md:top-[330px] md:left-[415px] w-56 h-80 md:w-36 md:h-48 bg-gray-100 border-4 border-white shadow-xl -rotate-1 shrink-0">
+                        <a href="https://www.instagram.com/p/DUI4fyaApFN/?hl=es&img_index=1" target="_blank" class="cork-item relative md:absolute md:top-[330px] md:left-[415px] w-56 h-80 md:w-36 md:h-48 bg-gray-100 border-4 border-white shadow-xl -rotate-1 shrink-0">
                             <div class="pin bg-black"></div>
-                            <img src="img/cartel 04.png" loading="lazy" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML+='<span class=\\'p-4 text-center font-bold text-xs flex h-full items-center justify-center\\'>CARTEL 04</span>'">
+                            <img src="img/cartel 04.jpg" loading="lazy" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML+='<span class=\\'p-4 text-center font-bold text-xs flex h-full items-center justify-center\\'>CARTEL 04</span>'">
                         </a>
                         
                         <!-- Espacio extra mínimo para móvil -->
@@ -541,7 +543,7 @@
                             </div>
                         </a>
 
-                        <a href="https://drive.google.com/file/d/1lL2pyiXJDYZoJwls55D_L-vnZbxTkDdh/view?usp=sharing" target="_blank" class="block text-left bg-white border-2 border-black p-4 shadow-[4px_4px_0px_#a855f7] relative group hover:scale-[1.03] hover:shadow-[6px_6px_0px_#a855f7] transition-all duration-200">
+                        <a href="https://drive.google.com/file/d/1-u4EOeTlOiAt3oMeJigeR5pOfWV9Kc5_/view?usp=sharing" target="_blank" class="block text-left bg-white border-2 border-black p-4 shadow-[4px_4px_0px_#a855f7] relative group hover:scale-[1.03] hover:shadow-[6px_6px_0px_#a855f7] transition-all duration-200">
                             <div class="flex justify-between items-start">
                                  <div class="flex flex-col gap-1">
                                     <span class="bg-purple-100 text-purple-800 text-[9px] px-2 py-1 font-bold font-mono w-fit uppercase">Mediakit PDF</span>
